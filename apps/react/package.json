@@ -1,0 +1,19 @@
+{
+  "name": "@modern-template/chat",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nx rsbuild:build",
+    "dev": "nx rsbuild:dev --open",
+    "preview": "nx rsbuild:preview"
+  },
+  "dependencies": {
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3"
+  }
+}

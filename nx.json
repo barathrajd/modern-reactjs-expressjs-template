@@ -1,0 +1,48 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "targetDefaults": {
+    "lint": {
+      "dependsOn": [
+        "^lint"
+      ]
+    },
+    "test": {
+      "dependsOn": [
+        "^test"
+      ]
+    },
+    "typecheck": {
+      "dependsOn": [
+        "^typecheck"
+      ],
+      "cache": true
+    },
+    "build": {
+      "outputs": [
+        "{projectRoot}/dist, lib, build"
+      ],
+      "cache": true
+    },
+    "@nx/vitest:test": {
+      "cache": true,
+      "inputs": [
+        "default",
+        "^default"
+      ]
+    }
+  },
+  "plugins": [
+    {
+      "plugin": "@nx/rsbuild",
+      "options": {
+        "buildTargetName": "rsbuild:build",
+        "devTargetName": "rsbuild:dev",
+        "previewTargetName": "rsbuild:preview",
+        "inspectTargetName": "inspect",
+        "typecheckTargetName": "rsbuild:typecheck",
+        "buildDepsTargetName": "build-deps",
+        "watchDepsTargetName": "watch-deps"
+      }
+    }
+  ]
+}

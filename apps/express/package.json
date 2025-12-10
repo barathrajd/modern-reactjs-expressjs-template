@@ -1,0 +1,32 @@
+{
+  "name": "@modern-template/chat-server",
+  "version": "2.0.0",
+  "description": "A basic starter for an express.js v5 API with Typescript",
+  "author": "Barathraj Devarajan <baratraj.uidev@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/baratrajd/modern-template.git"
+  },
+  "keywords": [],
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "node --env-file=.env dist/index.js",
+    "dev": "NODE_ENV=development nx rsbuild:build --watch & node --watch dist/index.js",
+    "build": "NODE_ENV=production nx rsbuild:build",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "morgan": "^1.10.1",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.5",
+    "@types/morgan": "^1.9.10"
+  }
+}
